@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Uncomment if you want your page to NOT be indexed by search engines: -->
+    <meta name="robots" content="none">
+    <link rel="stylesheet" href="style.css" />
+    <title>A Uniquely American Problem</title>
+    <script type="module" src="main.js"></script>
+    <!--   Uncomment if using d3: -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Create a div where the graph will take place -->
+    <!--  <div id="skyline"></div>-->
+
+</head>
+
+<!------------------------------------------------------------>
+<!-- You are free to modify this template however you want! -->
+<!------------------------------------------------------------>
+
+<body>
+<header>
+    <h1><a href=".">A Uniquely American Problem</a></h1>
+
+    <span>
+      <strong>Team Members: </strong> Seth Feaser, Hinal Patel, Sruthi Padisetty, Anusha Gani
+    </span>
+    <div class="citation">
+        <strong>Data Source</strong>:
+        <a href="https://www.TheViolenceProject.org" target="_blank">Violence Prevention Project</a>
+    </div>
+</header>
+<main>
+    <h3>Introduction</h3>
+    <p>Out of all of the challenges that nations face today, there is one that is uniquely American. While already a leader in gun violence, the United States is faced with an even more dangerous epidemic: mass shootings. Now, this isn't solely an American problem; there are occasional mass shootings in other countries as well, but they are not as numerous, as deadly, and in such varied locations as they are in the U.S.
+    </p>
+    <p>
+        Unlike many other countries that have passed stringent regulations and taken steps to curb the number of firearms in circulation, the United States stands out for its unique relationship with guns. The very idea of firearms is embedded in the cultural identity of a significant portion of its population. The right to bear arms is set in stone by the Second Amendment, which encourages well-regulated militias in the defense against government overreach. Unfortunately, this unyielding language prevents common-sense laws for safety and has given rise to a landscape marked by recurring tragedies. Tragedies that unfold in schools, places of worship, and public spaces leave behind a poorly regulated trail of grief and heartbreak.
+    </p>
+    <p>
+        The mission of the Violence Project is to gain a comprehensive, quantifiable view of this issue across the map. They have gathered sixty years of data corresponding to 197 mass shootings and broken those down into 180 variables. The goal was to connect the series of seemingly unconnected dots, hoping to reveal a pattern. As we delve into this data, we will showcase various variables from the violence project data in hopes of revealing patterns in this uniquely American issue.
+    </p>
+
+    <h3>Locations</h3>
+    <p>
+        To begin our examination, we've taken the blank canvas of the continental U.S. and overlaid a series of dots of varying sizes. Each dot below is not only a reminder of communities shattered by terror and grief but also an indicator of lives lost. Their size shows the number of innocent lives taken from their loved ones, and their placement tells the stories of American cities and towns forever changed by domestic terrorists.
+    </p>
+    <div id="map"></div>
+
+    <p>
+        Through this visualization, we attempt to understand the scale and scope of gun violence in the United States. We, as a people, need to confront the reality that these are not disparate events but symptoms of broader societal issues. As we walk through our other visualizations, we seek to find the correlations between who is committing these acts of terror, break down the factors that contribute to why they commit these acts, and take a look at where the shootings are most concentrated.
+    </p>
+
+
+    <h3>Demographics</h3>
+    <p> The occurrence of mass shootings across different regions of the United States is accompanied by a large diversity
+      in the kinds of perpetrators involved. From gender to general age range, race to education levels, and employment
+      status to firearm experience, each of these assailants possesses a unique combination of traits that contributes
+      to the complexity of understanding the individuals who commit these acts. This visualization provides multiple
+      “paths” you can interact with to learn what percentage of these assailants possess those specific traits and what
+      sort of conclusions can be drawn from them.
+    </p>
+
+    <!-- <p>Draft can be found at this link  </p> <a href="https://observablehq.com/d/61b744f04387d52a">HERE</a> -->
+
+    <div id="sunburst" >
+        <div class="iframe-container">
+            <iframe width="100%" height="1000" frameborder="0"
+                    src="https://observablehq.com/embed/61b744f04387d52a@853?cells=breadcrumb%2Cviewof+sunburst"></iframe>
+        </div>
+    </div>
+
+
+    <h3>Motives</h3>
+    <p>
+        Now that we have gained some small insight into who the perpetrators are, we also asked ourselves what makes these people break. In an attempt to gain insight into the factors that could cause shootings, we've grouped the data into categories that explore the history of the shooters and what their motives could have been. As you navigate the chart below, the percentages come from the unique field data and how it compares to the overall total of offenders. For example, there is a field called mental illness that is nested under Mental Health Factors, Treatment, and History, showing 52.5%. The percentage corresponds to the fields within the data set that have evidence of some kind of mental illness that were encoded with numerical values. The indicators within the data were: “No evidence of psychiatric disorder," “Mood disorder,"  “Thought disorder,"  “Other psychiatric disorder,"  and “Indication of psychiatric disorder but no diagnosis,” numbered from 0 to 4. *Note: Holding the curser on a particular node or path will highlight it.
+    </p>
+    <div id="sankey"></div>
+    <p>
+        As you can see from the graph above, there are numerous factors that could be motivating factors in these shootings, but not a single one stood out above the others. The field that corresponded to the often-cited argument that mental illness is the issue, not guns, was only a potential factor for 52.5% of the 197 shootings in the dataset. We can see that it does play a role in some shootings, but not nearly enough to be the proposed solution that politicians claim that it is.
+    </p>
+
+    <h3>Where do Shootings Most Often Occur?</h3>
+    <p> After learning more about who these assailants may be, and the factors that may lead someone to commit a mass shooting, we would like to examine where these occurences happen in America.
+        What settings do shootings most often occur? Are these locations in metropolitan areas or more rural? This information can provide an insight into the average American's day-to-day
+        roaming and help them be more aware/mindful of areas in which to be careful. In this visualization, data taken from the shootings of 197 offenders provide an insights in a skyline that
+        hosts images of the different categories of settings. To interact, hover over each building to see data that is pertinent to that location type.
+    </p>
+    <script type="text/javascript" src="https://unpkg.com/external-svg-loader@1.0.0/svg-loader.min.js" async></script>
+    <div id = "skyline">
+
+    </div>
+
+    <h3>Conclusion</h3>
+    <p> The issue of mass shootings in the United States is not just a collection of
+      various and isolated incidents, but in fact an interconnection between many factors
+      within American society. From the geographical location and spread of these shootings,
+      demographics of the assailants themselves, and potential and underlying motives behind
+      their actions, we as individuals can take what we learn from these patterns and craft
+      effective policies and interventions to counteract this heartbreaking situation.
+      We hope that this article has been an informative one and encourages further reflection
+      on this important matter. With our collective effort, we can work towards implementing
+      meaningful changes at the root of gun violence and ensure a more secure and safer
+      future for generations to come. </p>
+
+</main>
+
+<footer>
+    <p>
+        <a href="https://gitlab.cs.washington.edu/cse442/24wi/final-project/Uniquely-American">Repository</a>
+        <br>
+        <a href="https://courses.cs.washington.edu/courses/cse442/23wi/">CSE 442 Data Visualization</a>
+        <br>
+        <a href="https://www.washington.edu">University of Washington</a>
+    </p>
+</footer>
+</body>
+
+</html>
+
+
+
+<!--    <div id="observablehq-breadcrumb-47c3ba54"></div>-->
+<!--    <div id="observablehq-viewof-sunburst-47c3ba54"></div>-->
+
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">-->
+<!--    <script type="module">-->
+<!--      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";-->
+<!--      import define from "https://api.observablehq.com/d/61b744f04387d52a@624.js?v=4";-->
+<!--      new Runtime().module(define, name => {-->
+<!--        if (name === "breadcrumb") return new Inspector(document.querySelector("#observablehq-breadcrumb-47c3ba54"));-->
+<!--        if (name === "viewof sunburst") return new Inspector(document.querySelector("#observablehq-viewof-sunburst-47c3ba54"));-->
+<!--      });-->
+<!--    </script>-->
+
+
+
+<!--    <div id="observablehq-cadf6b92"></div>-->
+<!--    <p>Credit: <a href="https://observablehq.com/d/047b61a41c458b8c@596">Bar chart by Anusha A Gani&#039;s Workspace</a></p>-->
+
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">-->
+<!--    <script type="module">-->
+<!--      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";-->
+<!--      import define from "https://api.observablehq.com/d/047b61a41c458b8c@596.js?v=4";-->
+<!--      new Runtime().module(define, Inspector.into("#observablehq-cadf6b92"));-->
+<!--    </script>-->
+<!--    <script>-->
+
+<!--      // set the dimensions and margins of the graph-->
+<!--      var margin = {top: 30, right: 30, bottom: 70, left: 60},-->
+<!--              width = 460 - margin.left - margin.right,-->
+<!--              height = 400 - margin.top - margin.bottom;-->
+
+<!--      // append the svg object to the body of the page-->
+<!--      var svg = d3.select("#skyline")-->
+<!--              .append("svg")-->
+<!--              .attr("width", width + margin.left + margin.right)-->
+<!--              .attr("height", height + margin.top + margin.bottom)-->
+<!--              .append("g")-->
+<!--              .attr("transform",-->
+<!--                      "translate(" + margin.left + "," + margin.top + ")");-->
+
+<!--      // Parse the Data-->
+<!--      d3.csv(src/data/locations.csv, function(data) {-->
+
+<!--// X axis-->
+<!--        var x = d3.scaleBand()-->
+<!--                .range([ 0, width ])-->
+<!--                .domain(data.map(function(d) { return d.Country; }))-->
+<!--                .padding(0.2);-->
+<!--        svg.append("g")-->
+<!--                .attr("transform", "translate(0," + height + ")")-->
+<!--                .call(d3.axisBottom(x))-->
+<!--                .selectAll("text")-->
+<!--                .attr("transform", "translate(-10,0)rotate(-45)")-->
+<!--                .style("text-anchor", "end");-->
+
+<!--// Add Y axis-->
+<!--        var y = d3.scaleLinear()-->
+<!--                .domain([0, 13000])-->
+<!--                .range([ height, 0]);-->
+<!--        svg.append("g")-->
+<!--                .call(d3.axisLeft(y));-->
+
+<!--// Bars-->
+<!--        svg.selectAll("mybar")-->
+<!--                .data(data)-->
+<!--                .enter()-->
+<!--                .append("rect")-->
+<!--                .attr("x", function(d) { return x(d.Country); })-->
+<!--                .attr("y", function(d) { return y(d.Value); })-->
+<!--                .attr("width", x.bandwidth())-->
+<!--                .attr("height", function(d) { return height - y(d.Value); })-->
+<!--                .attr("fill", "#69b3a2")-->
+
+<!--      })-->
+
+<!--    </script>-->
